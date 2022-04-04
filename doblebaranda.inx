@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Doble baranda</name>
+    <id>org.inkscape.estucheria.doblebaranda</id>
+    <image>DobleBarandaLayout.svg</image>
+    <param name="unit" gui-text="Unit:" type="optiongroup" appearance="combo">
+        <option translatable="no" value="mm">mm</option>
+        <option translatable="no" value="cm">cm</option>
+        <option translatable="no" value="in">in</option>
+    </param>
+    <param name="width"  type="float" min="0.1" max="300.0" gui-text="A - Ancho:">10.0</param>
+    <param name="depth"  type="float" min="0.1" max="300.0" gui-text="L - Largo:">3.0</param>
+    <param name="height" type="float" min="0.1" max="300.0" gui-text="H - Alto:">15.0</param>
+    <param name="glue_tab" type="float" min="0.1" max="300.0" gui-text="P - Ancho pestaña:">15.0</param>
+    <param name="use_material_compensation" type="bool" gui-text="Aplicar compensación de material (solo en mm.)">false</param>
+    <label>Esta opción solo funciona con mm., asegurate que esta desmarcada si no usas esta unidad.</label>
+    <param name="material_compensation" type="float" min="0.2" max="50.0" gui-text="Grueso del material:">0.250</param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Estucheria"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command location="inx" interpreter="python">doblebaranda.py</command>
+    </script>
+</inkscape-extension>
